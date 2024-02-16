@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import { NavBar, Body } from "../components";
+import { CreatePrompt, NavBar, Prompts, UserProfile } from "../components";
 import { client } from "../client";
 import { getUser } from "../utils";
 
@@ -23,7 +23,15 @@ const Home = () => {
     <div>
       <NavBar user={user && user} />
       <Routes>
-        <Route path="/" element={<Body user={user && user} />} />
+        <Route path="/*" element={<Prompts user={user && user} />} />
+        <Route
+          path="/user-profile/:userId"
+          element={<UserProfile user={user && user} />}
+        />
+        <Route
+          path="/create-prompt"
+          element={<CreatePrompt user={user && user} />}
+        />
       </Routes>
     </div>
   );

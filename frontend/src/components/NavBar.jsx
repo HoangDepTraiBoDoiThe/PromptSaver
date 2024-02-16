@@ -12,7 +12,11 @@ const NavBar = ({ user }) => {
           <img className="w-40" src={logoText}></img>
         </Link>
         <Link>
-          <img src={user?.image} alt="user-picture" className="rounded-full" />
+          <img
+            src={user?.image}
+            alt="user-picture"
+            className="rounded-full w-14"
+          />
         </Link>
       </div>
     </div>
