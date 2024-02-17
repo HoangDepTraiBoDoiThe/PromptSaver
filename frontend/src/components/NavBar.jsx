@@ -11,7 +11,7 @@ const NavBar = ({ user }) => {
         <Link to="/">
           <img className="w-40" src={logoText}></img>
         </Link>
-        <Link>
+        <Link to={`/user-profile/${user._id}`}>
           <img
             src={user?.image}
             alt="user-picture"

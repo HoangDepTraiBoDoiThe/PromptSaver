@@ -20,7 +20,7 @@ const Prompts = ({ user }) => {
 
   return (
     <div>
-      <Search />
+      <Search Prompts={Prompts} setPrompts={setPrompts} />
       <div className="w-full gap-2 flex flex-wrap p-5">
         {Prompts?.map((prompt, i) => (
           <Prompt
